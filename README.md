@@ -139,6 +139,8 @@ function animate() {
 ![Dark-Theme](img/dark.png)
 
 #### TODO
--[x] Implement button, label
--[ ] Fix image issue 
--[ ] Implement more components (image, video, slider, etc)
+- [x] Implement button, label
+ 
+- [ ] Fix image issue 
+ 
+- [ ] Implement more components (image, video, slider, etc)
