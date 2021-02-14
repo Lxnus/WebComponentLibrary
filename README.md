@@ -6,6 +6,23 @@
 ##### Requirements:
 * Build gui via context (2d)
 * nodejs
+* Add the scripts to the .html file u choose as href.
+```html
+// head part...
+// ...
+<body>
+    <canvas id="canvas1"></canvas> // define canvas
+    
+    <script src="backend/gui/panel.js"></script>
+    <script src="backend/gui/label.js"></script>
+    <script src="backend/gui/button.js"></script>
+    <script src="backend/gui/image.js"></script>
+    <script src="backend/particle.js"></script>
+    <script src="backend/animation.js"></script>
+    <script src="backend/view.js"></script>
+</body>
+</html>
+```
 
 ##### Build some simple components
 ```javascript
