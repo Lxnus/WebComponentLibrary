@@ -140,4 +140,5 @@ function animate() {
 
 #### TODO
 -[x] Implement button, label
+-[ ] Fix image issue 
 -[ ] Implement more components (image, video, slider, etc)
