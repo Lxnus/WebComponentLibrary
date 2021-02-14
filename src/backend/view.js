@@ -56,12 +56,9 @@ panel.addComponent(demoViewRight);
  * Demo-View-Left
  */
 const dvlPanel = new Panel(canvas.width / 4, canvas.height / 1.8, 400, 600, "#000000", 0.75);
-const lImage = document.getElementById("dvlImage");
-const dvlImage = new ImageComponent(0, 0, lImage, true);
 const dvlTitle = new Label(0, 330, "#ffffff", 40, "Demo-Panel-Left", true, undefined, undefined);
 
 dvlPanel.addComponent(dvlTitle);
-dvlPanel.addComponent(dvlImage);
 //*******************************************
 
 
@@ -69,12 +66,9 @@ dvlPanel.addComponent(dvlImage);
  * Demo-View-Right
  */
 const dvrPanel = new Panel(canvas.width / 2 + canvas.width / 4, canvas.height / 1.8, 400, 600, "#000000", 0.75);
-const rImage = document.getElementById("dvlImage");
-const dvrImage = new ImageComponent(0, 0, rImage, true);
 const dvrTitle = new Label(0, 330, "#ffffff", 40, "Demo-Panel-Right", true, undefined, undefined);
 
 dvrPanel.addComponent(dvrTitle);
-dvrPanel.addComponent(dvrImage);
 //*******************************************
 
 
