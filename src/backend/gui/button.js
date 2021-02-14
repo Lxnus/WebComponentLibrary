@@ -72,4 +72,8 @@ class Button {
     setVisible(visible) {
         this.visible = visible;
     }
+
+    isVisible() {
+        return this.visible;
+    }
 }

@@ -35,6 +35,7 @@ class Panel {
         this.refactorComponents();
         this.draw();
         for(let i = 0; i < this.components.length; i++) {
+            this.components[i].setVisible(this.isVisible());
             this.components[i].update();
         }
     }

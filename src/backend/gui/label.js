@@ -17,7 +17,8 @@ class Label {
         if(this.x < x) this.x = x;
         if(this.y < y) this.y = y + this.getTextHeight(this.text) * (this.fontSize / 10);
 
-        if(this.center) this.x = x + this.getTextWidth(this.text) / 2;
+        context.font = this.fontSize + "px Arial";
+        if(this.center) this.x = x + width / 2 - this.getTextWidth(this.text) / 2;
     }
 
     draw() {
@@ -60,5 +61,9 @@ class Label {
 
     setVisible(visible) {
         this.visible = visible;
+    }
+
+    isVisible() {
+        return this.visible;
     }
 }
