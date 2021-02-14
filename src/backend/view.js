@@ -2,11 +2,11 @@
  * Define which canvas is used for the webpage.
  * @type {HTMLElement}
  */
-let canvas = undefined;
+let canvas;
 if(window.location.href.endsWith("index.html")) {
-    canvas = document.getElementById("canvas1");
+    canvas = document.getElementById("index");
 } else if(window.location.href.endsWith("demo.html")) {
-    canvas = document.getElementById("canvas2");
+    canvas = document.getElementById("demo");
 }
 const context = canvas.getContext("2d");
 canvas.width = window.innerWidth;
