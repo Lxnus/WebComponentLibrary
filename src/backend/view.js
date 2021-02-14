@@ -73,6 +73,36 @@ dvrPanel.addComponent(dvrTitle);
 
 
 /**
+ * Image stuff...
+ */
+window.addEventListener("load", function() {
+    let dvrImg1 = document.getElementById("dvrImg1");
+    let imageComponent1 = new ImageComponent(0, canvas.height / 2 - canvas.height / 8, dvrImg1, true);
+    imageComponent1.setMaxSize(350, 200);
+
+    let dvrImg2 = document.getElementById("dvrImg2");
+    let imageComponent2 = new ImageComponent(0, canvas.height / 2 + canvas.height / 8, dvrImg2, true);
+    imageComponent2.setMaxSize(350, 200);
+
+    dvrPanel.addComponent(imageComponent1);
+    dvrPanel.addComponent(imageComponent2);
+
+
+    let dvlImg1 = document.getElementById("dvlImg1");
+    let imageComponent3 = new ImageComponent(0, canvas.height / 2 - canvas.height / 8, dvlImg1, true);
+    imageComponent3.setMaxSize(350, 200);
+
+    let dvlImg2 = document.getElementById("dvlImg2");
+    let imageComponent4 = new ImageComponent(0, canvas.height / 2 + canvas.height / 8, dvlImg2, true);
+    imageComponent4.setMaxSize(350, 200);
+
+    dvlPanel.addComponent(imageComponent3);
+    dvlPanel.addComponent(imageComponent4);
+});
+//*******************************************
+
+
+/**
  * Web-Stuff
  */
 const title = new Label(canvas.width / 4, canvas.height / 6, "#ffffff", 125, "Informatik Projekt", true, true, "#000000", 0.75

@@ -1,42 +1,50 @@
 class ImageComponent {
-    constructor(x, y, imageSrc, center) {
+    constructor(x, y, image, center) {
         this.x = x;
         this.y = y;
-        this.imageSrc = imageSrc;
+        this.image = image;
         this.center = center;
 
         this.visible = true;
 
-        this.width = undefined;
-        this.height = undefined;
-
-        this.image = new Image();
+        this.width = this.image.width;
+        this.height = this.image.height;
     }
 
     refactor(x, y, width, height) {
         if(this.x < x) this.x = x;
         if(this.y < y) this.y = y;
-        if(this.x + this.image.width > x + width) {
-            this.x -= Math.abs((this.x + this.image.width) - (x + width));
+        if(this.x + this.width > x + width) {
+            this.x -= Math.abs((this.x + this.width) - (x + width));
         }
-        if(this.y + this.image.height > y + height) {
-            this.y -= Math.abs((this.y + this.image.height) - (y + height));
+        if(this.y + this.height > y + height) {
+            this.y -= Math.abs((this.y + this.height) - (y + height));
         }
-        if(this.center) this.x = x + (width / 2) - this.width / 2;
+
+        if(this.width > width) {
+            this.width = width;
+        }
+        if(this.height > height) {
+            this.height = height;
+        }
+
+        if(this.center) this.x = x + (width / 2) - (this.width / 2);
     }
 
     draw() {
         if(!this.visible) return;
-        this.image.onload = function () {
-            context.beginPath();
-            context.drawImage(this.image, this.x, this.y, this.width, this.height);
-            context.closePath();
-        }
-        this.image.src = this.imageSrc;
+        context.beginPath();
+        context.drawImage(this.image, this.x, this.y, this.width, this.height);
+        context.closePath();
     }
 
     update() {
         this.draw();
+    }
+
+    setMaxSize(width, height) {
+        this.width = width;
+        this.height = height;
     }
 
     setVisible(visible) {
