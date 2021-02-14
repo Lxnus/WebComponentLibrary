@@ -11,17 +11,9 @@
 // head part...
 // ...
 <body>
-    <canvas id="canvas1"></canvas> // define canvas
-    
-    <script src="backend/gui/panel.js"></script>
-    <script src="backend/gui/label.js"></script>
-    <script src="backend/gui/button.js"></script>
-    <script src="backend/gui/image.js"></script>
-    <script src="backend/particle.js"></script>
-    <script src="backend/animation.js"></script>
-    <script src="backend/view.js"></script>
+    ... scripts ...
+    <script src="<name>"></script>
 </body>
-</html>
 ```
 
 ##### Build some simple components
